@@ -1,5 +1,6 @@
 <footer class="footer">
   <div class="container">
+<p class="text-muted">
     <%= form_for Gist.new do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -8,5 +9,6 @@
     <%= f.text_field :url %>
     <%= f.submit %>
     <% end %>
+</p>
   </div>
 </footer>
