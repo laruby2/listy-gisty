@@ -1,0 +1,12 @@
+<footer class="footer">
+  <div class="container">
+    <%= form_for Gist.new do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</footer>

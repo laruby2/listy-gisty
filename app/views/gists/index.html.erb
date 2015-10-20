@@ -1,0 +1,14 @@
+<% @gists.each do | gist | %>
+  <ul>
+    <li>
+      <div>
+        <p><%= gist.name %></p>
+      </div>
+      <div><a href="<%= gist.url %>"><%= gist.name %></a></div>
+      <i class="fa fa-external-link"></i>
+      <div><%= gist.description %></div>
+    </li>
+  </ul>
+<% end %>
+
+<%= render "footer" %>

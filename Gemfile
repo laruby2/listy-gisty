@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+#Use bootstrap
+gem 'bootstrap-sass'
+# Use font-awesome
+gem 'font-awesome-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
