@@ -1,14 +1,10 @@
+<ul class="list-group">
 <% @gists.each do | gist | %>
-  <ul>
-    <li>
-      <div>
-        <p><%= gist.name %></p>
-      </div>
-      <div><a href="<%= gist.url %>"><%= gist.name %></a></div>
-      <i class="fa fa-external-link"></i>
-      <div><%= gist.description %></div>
-    </li>
-  </ul>
+    <h4 class="list-group-item-heading"><%= link_to gist.name, gist.url %>&nbsp;<%= icon('external-link') %></h4>
+    <p class="list-group-item-text"><%= gist.description %></p>
 <% end %>
+</ul>
+<!-- http://getbootstrap.com/components/#list-group -->
+<!-- https://github.com/FortAwesome/font-awesome-sass#rails-helper-usage -->
 
 <%= render "footer" %>
