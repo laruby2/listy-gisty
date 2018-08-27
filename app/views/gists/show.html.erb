@@ -1,0 +1,27 @@
+<div class="container">
+  <%= link_to 'List of Gists', gists_path %>
+  <div class="page-header">
+    <h1>
+      <%= gist_title @gist %>
+      <small><%= @gist.description %></small>
+    </h1>
+  </div>
+  <% if @response_body.is_a?(Hash) %>
+    <p><%= @response_body.inspect %></p>
+  <% else %>
+    <p><%= pluralize @response_body.size, 'gist' %></p>
+    <ul class="list-group">
+    <% @response_body.each do |gh_gist| %>
+      <% if gh_gist.is_a? Hash %>
+      <li class="list-group-item">
+        <%= gist_name(gh_gist) %>
+        <small><%= link_to gh_gist['html_url'], gh_gist['html_url'], target: "_blank", rel: "nofollow" %></small>
+      </li>
+      <% end %>
+    <% end %>
+    </ul>
+  <% end %>
+  There is a rate limiting <%= @response_header["x-ratelimit-limit"].first %> requests per hour.
+  <%= @response_header["x-ratelimit-remaining"].first %> requests remaining.
+  Current window will be reset at <%= Time.at @response_header["x-ratelimit-reset"].first.to_i %>
+</div>
