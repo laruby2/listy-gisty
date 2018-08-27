@@ -3,7 +3,7 @@
 Monday Group Project of our [LA Eastside Ruby-Rails Study Group](http://www.meetup.com/LA-Eastside-Ruby-Rails-Study-Group/). Get all gist listing and make it easily searchable. Implement features in order of Only Rails > Consume [Gist.Github](https://gist.github.com/) API > Replace frontend into Javascript framework.
 
 ```
-git pull https://github.com/LARailsLearners/listy-gisty
+git clone https://github.com/LARailsLearners/listy-gisty.git
 cd listy-gisty
 ```
 
