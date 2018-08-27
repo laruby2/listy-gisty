@@ -25,5 +25,5 @@ make a pull request by clicking "New Pull Request button"
 
 --
 
-* Ruby version 2.2.3
-* Rails version 4.2.4
+* Ruby version 2.3.1
+* Rails version 4.2.10
