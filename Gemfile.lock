@@ -167,7 +167,7 @@ DEPENDENCIES
   font-awesome-sass (~> 6.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.15)
+  pg (>= 0.18, < 2.0)
   rails (~> 5.1.7)
   rails_12factor
   sass-rails (~> 6.0)
