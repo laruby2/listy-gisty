@@ -6,7 +6,7 @@
       <small><%= @gist.description %></small>
     </h1>
   </div>
-  <% if @response_body.is_a?(Hash) %>
+  <% if @response_body.is_a?(Hash) || @response_body.is_a?(String) %>
     <p><%= @response_body.inspect %></p>
   <% else %>
     <p><%= pluralize @response_body.size, 'gist' %></p>
@@ -20,8 +20,10 @@
       <% end %>
     <% end %>
     </ul>
+
+    There is a rate limiting <%= @response_header["x-ratelimit-limit"].first %> requests per hour.
+    <%= @response_header["x-ratelimit-remaining"].first %> requests remaining.
+    Current window will be reset at <%= Time.at @response_header["x-ratelimit-reset"].first.to_i %>
   <% end %>
-  There is a rate limiting <%= @response_header["x-ratelimit-limit"].first %> requests per hour.
-  <%= @response_header["x-ratelimit-remaining"].first %> requests remaining.
-  Current window will be reset at <%= Time.at @response_header["x-ratelimit-reset"].first.to_i %>
+  <%= link_to 'Delete', gist_path, method: 'delete' %>
 </div>
