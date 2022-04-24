@@ -6,9 +6,9 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 6.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 7.0.0'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6.0'
 # Use Uglifier as compressor for JavaScript assets
