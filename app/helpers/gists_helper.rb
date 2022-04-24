@@ -1,6 +1,6 @@
 module GistsHelper
   def gist_title(gist)
-    link = link_to icon('external-link'), gist.url, rel: "nofollow"
+    link = link_to icon('fa-solid', 'external-link'), gist.url, rel: "nofollow"
     github = 'gist.github.com/'
     safe_join [github, gist.name, ' ', link]
   end
